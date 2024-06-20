@@ -13,7 +13,7 @@ public class MonoMenuSystemController : MonoBehaviour
 
     private void Start()
     {
-        if (InizializeAtStart) Inizialize();
+       // if (InizializeAtStart) Inizialize();
     }
 
     //public virtual void Inizialize()
