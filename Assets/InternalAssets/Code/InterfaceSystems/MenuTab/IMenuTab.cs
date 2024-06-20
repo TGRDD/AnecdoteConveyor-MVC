@@ -1,8 +1,11 @@
-public interface IMenuTab
+namespace WildTech.Systems.Menu
 {
-    void Hide();
+    public interface IMenuTab
+    {
+        void Hide();
 
-    void Show();
+        void Show();
 
-    void SetInteractable(bool state);
+        void SetInteractable(bool state);
+    }
 }
