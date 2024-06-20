@@ -2,6 +2,6 @@ namespace WildTech.Systems.Menu
 {
     public interface IMenuSystemController
     {
-        public void OpenNewTab(int tabIndex);  
+        public void OpenNewTab(int tabIndex);
     }
 }

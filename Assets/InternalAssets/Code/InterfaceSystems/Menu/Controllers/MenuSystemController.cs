@@ -7,13 +7,14 @@ namespace WildTech.Systems.Menu
         private IMenuSystemModel _model;
 
 
-        public MenuSystemController(MenuTab[] menuTabs)
+        public MenuSystemController(IMenuSystemModel modelSystem, IMenuSystemView viewSystem)
         {
 
-            _model = new MenuSystemModel(menuTabs);
-            _view = new ForceMenuSystemView();
+            _model = modelSystem;
+            _view = viewSystem;
 
             _model.OnModelChanged += _view.UpdateView;
+
         }
 
 
@@ -21,5 +22,6 @@ namespace WildTech.Systems.Menu
         {
             _model.SetCurrentTabID(TabID);
         }
+
     }
 }
