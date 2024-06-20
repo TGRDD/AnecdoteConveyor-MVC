@@ -1,19 +1,12 @@
-using System;
 using UnityEngine;
 
 namespace WildTech.Systems.Menu
 {
     public class MenuTab : MonoBehaviour, IMenuTab
     {
-        public event Action OnMenuButtonClicked;
 
         [SerializeField, HideInInspector] private MenuButton[] _tabButtons;
 
-        [field: SerializeField] private int _tabIndex;
-        private void Awake()
-        {
-            _tabButtons = GetComponentsInChildren<MenuButton>();
-        }
 
         public void Show()
         {
@@ -35,6 +28,8 @@ namespace WildTech.Systems.Menu
 
         public void InizializeButtons(IMenuSystemController controller)
         {
+            _tabButtons = GetComponentsInChildren<MenuButton>();
+
             foreach (var item in _tabButtons)
             {
                 item.OnNewTabOpenCall += controller.OpenNewTab;
