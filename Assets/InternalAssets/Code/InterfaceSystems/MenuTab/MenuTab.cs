@@ -28,12 +28,18 @@ namespace WildTech.Systems.Menu
 
         public void InizializeButtons(IMenuSystemController controller)
         {
+
             _tabButtons = GetComponentsInChildren<MenuButton>();
 
             foreach (var item in _tabButtons)
             {
                 item.OnNewTabOpenCall += controller.OpenNewTab;
             }
+        }
+
+        public void InizializeButton(IMenuSystemController controller, IMenuButton button)
+        {
+            button.OnNewTabOpenCall += controller.OpenNewTab; 
         }
     }
 }

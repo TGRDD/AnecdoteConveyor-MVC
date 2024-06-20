@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class MenuButton : MonoBehaviour
+public class MenuButton : MonoBehaviour, IMenuButton
 {
     public event Action<int> OnNewTabOpenCall;
 
