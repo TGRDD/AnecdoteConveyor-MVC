@@ -1,4 +1,7 @@
-public interface IGameBuilderController
+namespace WildTech.Systems.GameBuilder
 {
-    void BuildGame();
+    public interface IGameBuilderController
+    {
+        void BuildGame();
+    }
 }

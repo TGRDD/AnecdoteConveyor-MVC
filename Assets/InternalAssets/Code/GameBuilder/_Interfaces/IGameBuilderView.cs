@@ -1,4 +1,7 @@
-public interface IGameBuilderView
+namespace WildTech.Systems.GameBuilder
 {
-    public void UpdateView();
+    public interface IGameBuilderView
+    {
+        public void UpdateView(GameBuilderViewModel model);
+    }
 }

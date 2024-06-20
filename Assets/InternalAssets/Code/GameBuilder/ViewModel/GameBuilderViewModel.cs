@@ -1,8 +1,11 @@
-public class GameBuilderViewModel
+namespace WildTech.Systems.GameBuilder
 {
-    public float BuildProgress;
-    public GameBuilderViewModel(IGameBuilderModel gameBuilderModel)
+    public class GameBuilderViewModel
     {
-        BuildProgress = gameBuilderModel.BuildProgress;
+        public float BuildProgress;
+        public GameBuilderViewModel(IGameBuilderModel gameBuilderModel)
+        {
+            BuildProgress = gameBuilderModel.BuildProgress;
+        }
     }
 }
